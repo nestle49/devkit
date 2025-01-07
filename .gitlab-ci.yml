@@ -1,0 +1,84 @@
+stages:
+    - init
+    - build
+    - deploy
+
+variables:
+    npm_config_cache: $CI_PROJECT_DIR/.npm
+    DEPLOY_PATH: '/var/web/ui-kit'
+    GIT_STRATEGY: none # по-умолчанию отключено у всех задач, кроме первой (git-init)
+    RUNNER_TAG1: node20
+    RUNNER_TAG2: dev
+
+cache: []
+
+#
+# Templates
+##
+.cache: &cache
+    key:
+        files:
+            - package-lock.json # Если изменится этот файл, обновляем кеш
+    paths:
+        - .npm
+        - node_modules
+    policy: pull
+
+##
+# Tasks
+##
+
+git-init:
+    stage: init
+    variables:
+        GIT_STRATEGY: fetch
+    cache:
+        <<: *cache
+    script:
+        - echo "Инициализируем репозиторий в рабочем каталоге, загружаем кеш"
+    only:
+        - master
+    tags:
+        - '$RUNNER_TAG1'
+        - '$RUNNER_TAG2'
+
+npm-install:
+    stage: init
+    needs:
+        - job: git-init
+    script:
+        - npm ci --no-audit
+    cache:
+        <<: *cache
+        policy: push
+    only:
+        - master
+    tags:
+        - '$RUNNER_TAG1'
+        - '$RUNNER_TAG2'
+
+build:
+    stage: build
+    script:
+        - npm run build
+        - npm run docs:build
+    only:
+        - master
+    tags:
+        - '$RUNNER_TAG1'
+        - '$RUNNER_TAG2'
+
+deploy:
+    stage: deploy
+    environment:
+        name: master
+        url: http://$CI_PROJECT_NAME.$CI_RUNNER_DESCRIPTION
+    script:
+        - mkdir -p $DEPLOY_PATH/release
+        - rsync --delete-excluded --exclude '.git*' --exclude '.npm' --chmod=Dg+s,ug+w,Fo-w,+X -rl ./ $DEPLOY_PATH
+        - cd $APP_PATH
+    only:
+        - master
+    tags:
+        - '$RUNNER_TAG1'
+        - '$RUNNER_TAG2'

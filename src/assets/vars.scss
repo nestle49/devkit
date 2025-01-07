@@ -1,0 +1,115 @@
+@use 'sass:map';
+@import 'mixins';
+
+$fs-colors: (
+    secondary: #3b82f6,
+    secondary-weak: #8eb7f9,
+    secondary-stronger: #0057e6,
+    secondary-shadow: #3b82f6,
+    light: #fff,
+    light-secondary: #fafaff,
+    gray-1: #8d93ad,
+    gray-4: #bdbdbd,
+    gray-light: #f2f2f2,
+    line: #e4e4ff,
+    dark: #243064,
+    accent: #f96857,
+    accent-stronger: #ec4a37,
+    success: #219653,
+    danger: #ff4757,
+    warn: #cc9500,
+    title: #05082f
+);
+
+:root {
+    --ui-secondary: #{map.get($fs-colors, 'secondary')};
+    --ui-secondary-rgb: #{hex-to-rgb(map.get($fs-colors, 'secondary'))};
+    --ui-secondary-weak: #{map.get($fs-colors, 'secondary-weak')};
+    --ui-secondary-weak-rgb: #{hex-to-rgb(map.get($fs-colors, 'secondary-weak'))};
+    --ui-secondary-stronger: #{map.get($fs-colors, 'secondary-stronger')};
+    --ui-secondary-stronger-rgb: #{hex-to-rgb(map.get($fs-colors, 'secondary-stronger'))};
+    --ui-accent: #{map.get($fs-colors, 'accent')};
+    --ui-accent-rgb: #{hex-to-rgb(map.get($fs-colors, 'accent'))};
+    --ui-accent-stronger: #{map.get($fs-colors, 'accent-stronger')};
+    --ui-accent-stronger-rgb: #{hex-to-rgb(map.get($fs-colors, 'accent-stronger'))};
+    --ui-light: #{map.get($fs-colors, 'light')};
+    --ui-light-rgb: #{hex-to-rgb(map.get($fs-colors, 'light'))};
+    --ui-light-secondary: #{map.get($fs-colors, 'light-secondary')};
+    --ui-gray: #{map.get($fs-colors, 'gray-1')};
+    --ui-gray-4: #{map.get($fs-colors, 'gray-4')};
+    --ui-gray-4-rgb: #{hex-to-rgb(map.get($fs-colors, 'gray-4'))};
+    --ui-gray-light: #{map.get($fs-colors, 'gray-light')};
+    --ui-gray-light-rgb: #{hex-to-rgb(map.get($fs-colors, 'gray-light'))};
+    --ui-success: #{map.get($fs-colors, 'success')};
+    --ui-success-rgb: #{hex-to-rgb(map.get($fs-colors, 'success'))};
+    --ui-success-light: #2196531a;
+    --ui-danger: #{map.get($fs-colors, 'danger')};
+    --ui-danger-rgb: #{hex-to-rgb(map.get($fs-colors, 'danger'))};
+    --ui-danger-light: #f968571a;
+    --ui-warn: #{map.get($fs-colors, 'warn')};
+    --ui-warn-rgb: #{hex-to-rgb(map.get($fs-colors, 'warn'))};
+    --ui-warn-light: #ffce3a1a;
+    --ui-line: #{map.get($fs-colors, 'line')};
+    --ui-indigo: #{map.get($fs-colors, 'dark')};
+    --ui-indigo-rgb: #{hex-to-rgb(map.get($fs-colors, 'dark'))};
+    --ui-shadow-button: 0 8px 15px rgb(52 94 146 / 0.15);
+    --ui-shadow-secondary: 5px 5px 15px rgb(59 130 246 / 0.3), inset 3px 3px 10px rgb(255 255 255 / 0.3);
+    --ui-title-color: #{map.get($fs-colors, 'title')};
+    --ui-dropdown-bg: var(--ui-light);
+    --ui-dropdown-shadow: 7px 7px 20px 5px rgb(208 205 221 / 0.5), -10px -10px 30px rgb(255 255 255 / 0.15);
+    --ui-checkbox: var(--ui-secondary);
+    --ui-checkbox-bg: var(--ui-light);
+    --ui-checkbox-icon: var(--ui-light);
+    --ui-inactive-switch: var(--ui-gray);
+    --ui-active-switch: var(--ui-secondary);
+    --ui-range: var(--ui-secondary);
+    --ui-text-field-bg: var(--ui-light);
+    --ui-text-field-color: var(--ui-indigo);
+    --ui-text-field-color-hover: var(--ui-secondary);
+    --ui-text-field-icon: var(--ui-secondary);
+    --ui-text-field-border-color: var(--ui-secondary);
+    --ui-text-field-border-color-placeholder-shown: rgb(var(--ui-secondary-rgb) / 0.7);
+    --ui-text-field-placeholder: rgb(var(--ui-indigo) / 0.5);
+    --ui-text-field-disabled-bg: rgb(var(--ui-gray-light-rgb) / 0.3);
+    --ui-text-field-disabled: var(--ui-gray-4);
+    --ui-secondary-light: rgb(var(--ui-secondary-rgb) / 0.3);
+    --ui-color-palette-border: rgb(var(--ui-secondary-rgb) / 0.5);
+    --ui-file-input-color: var(--ui-indigo);
+    --ui-file-input-color-hover: var(--ui-secondary);
+    --ui-file-input-placeholder: var(--ui-secondary);
+    --ui-dropdown-input-color: var(--ui-secondary);
+    --ui-dropdown-input-color-hover: var(--ui-indigo);
+    --ui-dropdown-input-placeholder: rgb(var(--ui-indigo) / 0.5);
+    --ui-table-head-bg: var(--ui-secondary);
+    --ui-table-head-color: var(--ui-light);
+    --ui-table-head-border-color: rgb(255 255 255 / 0.2);
+    --ui-table-body-bg: var(--ui-light);
+    --ui-table-body-color: var(--ui-indigo);
+    --ui-table-body-border-color: var(--ui-line);
+    --ui-table-details-bg: #fafaff;
+    --ui-list-color-mode: var(--ui-accent);
+    --ui-radio-icon: #3b82f6;
+    --ui-radio-bg: #fff;
+    --ui-radio-button-bg: #fafaff;
+    --ui-radio-button-bg-hover: #fff;
+    --ui-radio-button-color: #243064;
+    --ui-radio-button-color-hover: #3b82f6;
+    --ui-radio-button-border: #e4e4ff;
+    --ui-radio-button-border-hover: #fafaff;
+    --ui-radio-button-shadow: 0 8px 15px rgb(52 94 146 / 0.11);
+    --ui-radio-button-bg-active: #fff;
+    --ui-radio-button-color-active: #3b82f6;
+    --ui-radio-button-border-active: #3b82f6;
+    --ui-search-bg: #fff;
+    --ui-search-border: #fafaff;
+    --ui-search-shadow: 0 8px 15px rgb(52 94 146 / 0.11);
+    --ui-search-color: #243064;
+    --ui-search-color-hover: var(--ui-secondary);
+    --ui-underline: #e4e4ff;
+    --ui-chips-bg: rgb(var(--ui-secondary-rgb) / 0.2);
+    --ui-chips: var(--ui-secondary);
+    --ui-chips-icon: var(--ui-secondary);
+    --ui-chips-border-radius: 10px;
+    --ui-loader-color: var(--ui-light-rgb);
+    --ui-text-color: var(--ui-indigo);
+}

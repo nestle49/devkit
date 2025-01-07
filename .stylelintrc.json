@@ -1,0 +1,14 @@
+{
+    "extends": ["stylelint-config-standard-scss", "stylelint-config-recommended-vue/scss"],
+    "rules": {
+        "alpha-value-notation": "number",
+        "selector-class-pattern": null,
+        "scss/dollar-variable-pattern": null,
+        "value-keyword-case": [
+            "lower",
+            {
+                "camelCaseSvgKeywords": true
+            }
+        ]
+    }
+}

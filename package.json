@@ -1,0 +1,99 @@
+{
+    "name": "@foodsoul/ui-kit",
+    "private": false,
+    "version": "1.1.107",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/src/main.d.ts",
+                "default": "./dist/ui-kit.js"
+            },
+            "require": {
+                "types": "./dist/src/main.d.ts",
+                "default": "./dist/ui-kit.js"
+            }
+        },
+        "./style.css": "./dist/style.css"
+    },
+    "types": "./dist/src/main.d.ts",
+    "scripts": {
+        "dev": "vite",
+        "build": "npm run type-check && vite build",
+        "preview": "vite preview",
+        "type-check": "vue-tsc --noEmit",
+        "lint": "eslint . --fix --ignore-path .gitignore",
+        "stylelint": "npx stylelint '**/*.{css,scss,vue}'",
+        "format": "prettier --write .",
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs",
+        "publish-package": "npm publish --registry https://nodejs-repo.lan/",
+        "login-registry": "npm login --registry https://nodejs-repo.lan/",
+        "prepare": "is-ci || husky",
+        "prepublishOnly": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@git.lan:fs-frontend/products/packages/ui-kit.git"
+    },
+    "author": {
+        "name": "Альберт Гивойно",
+        "email": "nestle49@ya.ru"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.0.3",
+        "@commitlint/config-conventional": "^19.0.3",
+        "@foodsoul/eslint-config": "^1.0.34",
+        "@foodsoul/maska": "^1.1.3",
+        "@foodsoul/vite-svg-sprite-plugin": "^1.0.7",
+        "@types/color": "^3.0.6",
+        "@types/dragscroll": "^0.0.3",
+        "@types/node": "^20.11.24",
+        "@types/tinycolor2": "^1.4.6",
+        "@vitejs/plugin-vue": "^5.0.4",
+        "@vue/tsconfig": "^0.5.1",
+        "@vuepress/bundler-vite": "^2.0.0-rc.8",
+        "@vuepress/theme-default": "^2.0.0-rc.18",
+        "@vueuse/core": "^10.9.0",
+        "autoprefixer": "^10.4.18",
+        "color": "^4.2.3",
+        "dayjs": "^1.11.10",
+        "dragscroll": "^0.0.8",
+        "husky": "^9.0.11",
+        "is-ci": "^3.0.1",
+        "lint-staged": "^15.2.2",
+        "postcss-html": "^1.6.0",
+        "prettier": "^3.2.5",
+        "rollup": "^4.12.0",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "sass": "^1.71.1",
+        "simplebar-vue": "^2.3.3",
+        "stylelint": "^16.2.1",
+        "stylelint-config-recommended-vue": "^1.5.0",
+        "stylelint-config-standard": "^36.0.0",
+        "stylelint-config-standard-scss": "^13.0.0",
+        "tinycolor2": "^1.6.0",
+        "typescript": "^5.3.3",
+        "unplugin-auto-import": "^0.17.5",
+        "vite": "^5.1.4",
+        "vite-plugin-dts": "^3.7.3",
+        "vue": "3.4.21",
+        "vue-i18n": "^9.10.1",
+        "vue-tsc": "^2.0.4",
+        "vuepress": "^2.0.0-rc.8"
+    },
+    "dependencies": {
+        "@vueuse/integrations": "^10.9.0",
+        "sortablejs": "^1.15.2",
+        "vue-router": "^4.3.0"
+    },
+    "sideEffects": false
+}

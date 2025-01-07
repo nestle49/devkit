@@ -1,0 +1,5 @@
+{
+    "cSpell.language": "en,ru",
+    "cSpell.words": ["composables", "foodsoul", "Inputmask", "maska", "tinycolor", "vuepress", "vueuse"],
+    "stylelint.validate": ["vue", "scss", "css"]
+}

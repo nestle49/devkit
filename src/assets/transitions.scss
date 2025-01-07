@@ -1,0 +1,13 @@
+.ui-fade-slow-enter-active,
+.ui-fade-slow-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.ui-fade-slow-enter-from,
+.ui-fade-slow-leave-to {
+    opacity: 0;
+}
+
+.ui-fade-slow-enter-to {
+    opacity: 1;
+}

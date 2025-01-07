@@ -1,0 +1,58 @@
+@import '~/style.scss';
+
+body {
+    font-size: 14px;
+    color: var(--c-text) !important;
+}
+
+:root {
+    --sidebar-width: 14rem;
+}
+
+div.theme-default-content:not(.custom) {
+    max-width: 100%;
+}
+
+.sidebar-item:not(.sidebar-heading) {
+    font-size: 14px;
+}
+
+.sidebar-item.sidebar-heading {
+    font-size: 14px;
+}
+
+.palette .theme-default-content h1,
+.theme-default-content h2,
+.theme-default-content h3,
+.theme-default-content h4,
+.theme-default-content h5,
+.theme-default-content h6 {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.ui-data-table {
+    border-collapse: separate !important;
+    margin: 0 !important;
+    thead {
+        th {
+            border: none !important;
+            border-right: 1px solid var(--ui-table-head-border-color) !important;
+        }
+    }
+    tbody {
+        td {
+            border: 1px solid var(--ui-table-body-border-color) !important;
+            border-top: none !important;
+            border-left: none !important;
+
+            &:first-of-type {
+                border-left: 1px solid var(--ui-table-body-border-color) !important;
+            }
+        }
+
+        tr:nth-child(2n) {
+            background: none !important;
+        }
+    }
+}

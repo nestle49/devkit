@@ -1,0 +1,12 @@
+@import './assets/main';
+
+:root {
+    --ui-purple: #9747ff;
+}
+
+.palette {
+    border: 1px dashed var(--ui-purple);
+    border-radius: 30px;
+    padding: 70px 100px;
+    background: #fafaff;
+}
