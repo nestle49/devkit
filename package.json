@@ -51,9 +51,6 @@
     "devDependencies": {
         "@commitlint/cli": "^19.0.3",
         "@commitlint/config-conventional": "^19.0.3",
-        "@foodsoul/eslint-config": "^1.0.34",
-        "@foodsoul/maska": "^1.1.3",
-        "@foodsoul/vite-svg-sprite-plugin": "^1.0.7",
         "@types/color": "^3.0.6",
         "@types/dragscroll": "^0.0.3",
         "@types/node": "^20.11.24",
@@ -92,6 +89,7 @@
     },
     "dependencies": {
         "@vueuse/integrations": "^10.9.0",
+        "eslint": "^9.21.0",
         "sortablejs": "^1.15.2",
         "vue-router": "^4.3.0"
     },

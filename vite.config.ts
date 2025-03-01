@@ -1,9 +1,8 @@
 import { defineConfig, type UserConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import path, { resolve } from 'path'
+import { resolve } from 'path'
 import typescript2 from 'rollup-plugin-typescript2'
 import dts from 'vite-plugin-dts'
-import { svgSpritePlugin } from '@foodsoul/vite-svg-sprite-plugin'
 import { fileURLToPath, URL } from 'node:url'
 
 import AutoImport from 'unplugin-auto-import/vite'
@@ -18,10 +17,10 @@ export default defineConfig(() => {
             }),
             vue(),
             AutoImport(AutoImportOptions),
-            svgSpritePlugin({
-                originalIconsDirectory: path.resolve(process.cwd(), 'src/assets/icons'),
-                outputDirectory: path.resolve(process.cwd(), 'src/assets')
-            }),
+            // svgSpritePlugin({
+            //     originalIconsDirectory: path.resolve(process.cwd(), 'src/assets/icons'),
+            //     outputDirectory: path.resolve(process.cwd(), 'src/assets')
+            // }),
             typescript2({
                 check: false,
                 tsconfigOverride: {

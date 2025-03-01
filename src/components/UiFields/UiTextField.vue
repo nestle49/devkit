@@ -87,7 +87,7 @@
                 <input
                     v-if="!$slots.chips || !value"
                     ref="field"
-                    v-inputmask="!!mask"
+<!--                    v-inputmask="!!mask"-->
                     v-autofocus="autofocus"
                     :data-inputmask-mask="mask"
                     class="ui-text-field__input h-100 w-100 p-0 overflow-hidden truncate ease outline-none border-box fs-14 fw-400 lh-160 montserrat truncate border-none bg-transparent"
@@ -143,7 +143,7 @@
 </template>
 
 <script lang="ts" setup>
-import { vInputmask } from '@foodsoul/maska'
+// import { vInputmask } from '@foodsoul/maska'
 import type { InputHTMLAttributes } from 'vue'
 
 import { type UiFieldProps, UiTextFieldMode, UiTextFieldSize, UiTextFieldType } from '~/components/types/ui-input'
