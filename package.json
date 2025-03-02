@@ -57,14 +57,14 @@
         "@types/tinycolor2": "^1.4.6",
         "@vitejs/plugin-vue": "^5.0.4",
         "@vue/tsconfig": "^0.7.0",
-        "@vuepress/bundler-vite": "^2.0.0-rc.8",
-        "@vuepress/theme-default": "^2.0.0-rc.18",
+        "@vuepress/bundler-vite": "^2.0.0-rc.20",
+        "@vuepress/theme-default": "^2.0.0-rc.80",
         "@vueuse/core": "^12.7.0",
         "autoprefixer": "^10.4.20",
         "color": "^5.0.0",
         "dayjs": "^1.11.13",
         "dragscroll": "^0.0.8",
-        "husky": "^9.0.11",
+        "husky": "^9.1.7",
         "is-ci": "^4.1.0",
         "lint-staged": "^15.2.2",
         "postcss-html": "^1.8.0",
@@ -84,8 +84,8 @@
         "vite-plugin-dts": "^4.5.1",
         "vue": "3.5.13",
         "vue-i18n": "^11.1.1",
-        "vue-tsc": "^2.0.4",
-        "vuepress": "^2.0.0-rc.8"
+        "vue-tsc": "^2.2.8",
+        "vuepress": "^2.0.0-rc.20"
     },
     "dependencies": {
         "@vueuse/integrations": "^12.7.0",
