@@ -481,7 +481,7 @@ $gridGapX: 13px;
 
 .date-weekdays {
     grid-template-columns: repeat(7, 1fr);
-    grid-gap: 0 $gridGapX;
+    grid-gap: 0 #{$gridGapX};
     margin: 10px 0 7px;
     text-transform: capitalize;
 
@@ -503,7 +503,7 @@ $gridGapX: 13px;
 .date-days {
     padding: 10px 0 0;
     grid-template-columns: repeat(7, 1fr);
-    grid-gap: 8px $gridGapX;
+    grid-gap: 8px #{$gridGapX};
 
     &__item {
         height: 22px;

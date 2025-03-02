@@ -204,7 +204,7 @@ watch(
 
     :deep(.ui-dropdown) {
         background: transparent;
-        box-shadow: transparent;
+        box-shadow: none;
 
         .button.button--neutral {
             background: transparent;

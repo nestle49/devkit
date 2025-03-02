@@ -196,7 +196,7 @@ const onClickHandler = (event: MouseEvent) => {
     --ui-button-border-color-hover: transparent;
 
     font-weight: 500;
-    transition: all $transitionDuration ease-in-out;
+    transition: all #{$transitionDuration} ease-in-out;
     letter-spacing: 0.05em;
     text-decoration: none;
     box-sizing: border-box;
@@ -233,7 +233,7 @@ const onClickHandler = (event: MouseEvent) => {
 
     &__content {
         width: 100%;
-        transition: border-color $transitionDuration ease-in-out;
+        transition: border-color #{$transitionDuration} ease-in-out;
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
@@ -245,7 +245,7 @@ const onClickHandler = (event: MouseEvent) => {
         width: 20px;
         height: 20px;
         flex-shrink: 0;
-        transition: all $transitionDuration ease-in-out;
+        transition: all #{$transitionDuration} ease-in-out;
     }
 
     &__content,
@@ -265,7 +265,7 @@ const onClickHandler = (event: MouseEvent) => {
 
     &__icon {
         display: inline-flex;
-        transition: transform $transitionDuration ease-in-out;
+        transition: transform #{$transitionDuration} ease-in-out;
     }
 
     &:not(#{$self}--disabled) {
@@ -287,7 +287,7 @@ const onClickHandler = (event: MouseEvent) => {
                     }
 
                     &--prepend {
-                        transform: translateX($translateDistance);
+                        transform: translateX(#{$translateDistance});
                     }
                 }
             }
@@ -367,7 +367,8 @@ const onClickHandler = (event: MouseEvent) => {
         &#{$self}--default {
             --ui-button-background: var(--ui-button-main-color);
             --ui-button-background-hover: var(--ui-button-main-color);
-            --ui-button-shadow: 5px 5px 20px rgb(var(--ui-button-main-color-stronger-rgb) / 0.2),
+            --ui-button-shadow:
+                5px 5px 20px rgb(var(--ui-button-main-color-stronger-rgb) / 0.2),
                 inset 3px 3px 10px rgb(var(--ui-button-inset-shadow) / 0.3);
         }
 
@@ -431,8 +432,8 @@ const onClickHandler = (event: MouseEvent) => {
             --ui-button-background-hover: var(--ui-custom-color);
             --ui-button-text-color: var(--ui-light);
             --ui-button-text-color-hover: var(--ui-light);
-            --ui-button-shadow: 5px 5px 15px rgb(var(--ui-custom-color-stronger-rgb) / 0.3),
-                inset 3px 3px 10px rgb(var(--ui-light-rgb) / 0.3);
+            --ui-button-shadow:
+                5px 5px 15px rgb(var(--ui-custom-color-stronger-rgb) / 0.3), inset 3px 3px 10px rgb(var(--ui-light-rgb) / 0.3);
         }
 
         &#{$self}--outlined {

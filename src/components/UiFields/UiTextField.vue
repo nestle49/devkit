@@ -553,15 +553,15 @@ input:-webkit-autofill:focus {
     -webkit-box-orient: vertical;
 
     &.large {
-        max-width: calc(100% - $large-prepend-icon-indention);
+        max-width: calc(100% - #{$large-prepend-icon-indention});
     }
 
     &.medium {
-        max-width: calc(100% - $medium-prepend-icon-indention);
+        max-width: calc(100% - #{$medium-prepend-icon-indention});
     }
 
     &.small {
-        max-width: calc(100% - $small-prepend-icon-indention);
+        max-width: calc(100% - #{$small-prepend-icon-indention});
     }
 }
 </style>

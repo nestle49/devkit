@@ -375,8 +375,8 @@ watch(
         > #{$self}__wrapper > #{$self}__content {
             &::after {
                 width: 100%;
-                height: $popoverGap;
-                bottom: calc($popoverGap * -1);
+                height: #{$popoverGap};
+                bottom: calc(#{$popoverGap} * -1);
                 left: 0;
             }
         }
@@ -388,9 +388,9 @@ watch(
     &--rightBottom {
         > #{$self}__wrapper > #{$self}__content {
             &::after {
-                width: $popoverGap;
+                width: #{$popoverGap};
                 height: 100%;
-                left: calc($popoverGap * -1);
+                left: calc(#{$popoverGap} * -1);
                 top: 0;
             }
         }
@@ -402,9 +402,9 @@ watch(
     &--leftBottom {
         > #{$self}__wrapper > #{$self}__content {
             &::after {
-                width: $popoverGap;
+                width: #{$popoverGap};
                 height: 100%;
-                right: calc($popoverGap * -1);
+                right: calc(#{$popoverGap} * -1);
                 top: 0;
             }
         }
@@ -417,8 +417,8 @@ watch(
         > #{$self}__wrapper > #{$self}__content {
             &::after {
                 width: 100%;
-                height: $popoverGap;
-                top: calc($popoverGap * -1);
+                height: #{$popoverGap};
+                top: calc(#{$popoverGap} * -1);
                 left: 0;
             }
         }

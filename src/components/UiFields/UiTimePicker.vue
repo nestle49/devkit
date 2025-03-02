@@ -213,7 +213,7 @@ $transition: all 0.3s ease-in-out;
     &__item {
         opacity: 0.6;
         height: $itemHeight;
-        margin: 0 0 $itemMargin;
+        margin: 0 0 #{$itemMargin};
         transition: $transition;
         font-variant-numeric: tabular-nums;
         letter-spacing: 0;

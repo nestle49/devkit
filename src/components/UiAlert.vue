@@ -66,27 +66,27 @@ defineEmits<Emits>()
 
     &.primary {
         color: var(--ui-accent);
-        background: rgba(var(--ui-accent-rgb) / $backgroundAlpha);
+        background: rgba(var(--ui-accent-rgb) / #{$backgroundAlpha});
     }
 
     &.secondary {
         color: var(--ui-secondary);
-        background: rgba(var(--ui-secondary-rgb) / $backgroundAlpha);
+        background: rgba(var(--ui-secondary-rgb) / #{$backgroundAlpha});
     }
 
     &.danger {
         color: var(--ui-danger);
-        background: rgba(var(--ui-danger-rgb) / $backgroundAlpha);
+        background: rgba(var(--ui-danger-rgb) / #{$backgroundAlpha});
     }
 
     &.success {
         color: var(--ui-success);
-        background: rgb(var(--ui-success-rgb) / $backgroundAlpha);
+        background: rgb(var(--ui-success-rgb) / #{$backgroundAlpha});
     }
 
     &.warn {
         color: var(--ui-warn);
-        background: rgb(var(--ui-warn-rgb) / $backgroundAlpha);
+        background: rgb(var(--ui-warn-rgb) / #{$backgroundAlpha});
     }
 }
 </style>
