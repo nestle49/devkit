@@ -28,8 +28,6 @@
         "lint": "eslint . --fix --ignore-path .gitignore",
         "stylelint": "npx stylelint '**/*.{css,scss,vue}'",
         "format": "prettier --write .",
-        "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs",
         "publish-package": "npm publish --registry https://nodejs-repo.lan/",
         "login-registry": "npm login --registry https://nodejs-repo.lan/",
         "prepare": "is-ci || husky",
@@ -57,8 +55,6 @@
         "@types/tinycolor2": "^1.4.6",
         "@vitejs/plugin-vue": "^5.0.4",
         "@vue/tsconfig": "^0.7.0",
-        "@vuepress/bundler-vite": "^2.0.0-rc.20",
-        "@vuepress/theme-default": "^2.0.0-rc.80",
         "@vueuse/core": "^12.7.0",
         "autoprefixer": "^10.4.20",
         "color": "^5.0.0",
@@ -84,8 +80,7 @@
         "vite-plugin-dts": "^4.5.1",
         "vue": "3.5.13",
         "vue-i18n": "^11.1.1",
-        "vue-tsc": "^2.2.8",
-        "vuepress": "^2.0.0-rc.20"
+        "vue-tsc": "^2.2.8"
     },
     "dependencies": {
         "@vueuse/integrations": "^12.7.0",
