@@ -42,7 +42,6 @@
             <DemoUiTab />
             <DemoUiRange />
             <DemoUiList />
-            <DemoUiQuote />
             <DemoUiHeading />
             <DemoUiUnderline />
             <DemoUiGradientBlock />
@@ -68,7 +67,6 @@ import DemoUiList from '~/components/demo/DemoUiList.vue'
 import DemoUiModal from '~/components/demo/DemoUiModal.vue'
 import DemoUiPagination from '~/components/demo/DemoUiPagination.vue'
 import DemoUiPopover from '~/components/demo/DemoUiPopover.vue'
-import DemoUiQuote from '~/components/demo/DemoUiQuote.vue'
 import DemoUiRadio from '~/components/demo/DemoUiRadio.vue'
 import DemoUiRange from '~/components/demo/DemoUiRange.vue'
 import DemoUiRating from '~/components/demo/DemoUiRating.vue'
