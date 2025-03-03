@@ -1,7 +1,6 @@
 import '~/assets/main.scss'
 
 import { UiAlertMode } from '~/components/types/ui-alert'
-import type { UiBreadcrumbItem } from '~/components/types/ui-breadcrumbs'
 import { UiButtonColorMode, UiButtonSize, UiButtonType } from '~/components/types/ui-button'
 import type { UiCountChangeType } from '~/components/types/ui-count'
 import { UiCountMode } from '~/components/types/ui-count'
@@ -21,7 +20,6 @@ import {
 } from '~/components/types/ui-table'
 import type { UiId, UiPhoneFormat } from '~/components/types/ui-textfield-phone-mask'
 import UiAlert from '~/components/UiAlert.vue'
-import UiBreadcrumbs from '~/components/UiBreadcrumbs.vue'
 import UiButton from '~/components/UiButton/UiButton.vue'
 import { useButton } from '~/components/UiButton/useButton'
 import UiCheckbox from '~/components/UiCheckbox.vue'
@@ -55,22 +53,11 @@ import UiTransitionExpand from '~/components/UiTransitionExpand.vue'
 import UiUnderline from '~/components/UiUnderline.vue'
 import { colorToRgbaMatrix } from '~/utils/colorHelper'
 
-export type {
-    TableHeader,
-    TableItem,
-    TableOnPageChangeParams,
-    UiBreadcrumbItem,
-    UiCountChangeType,
-    UiHeadingRange,
-    UiId,
-    UiPhoneFormat,
-    UiRowColor
-}
+export type { TableHeader, TableItem, TableOnPageChangeParams, UiCountChangeType, UiHeadingRange, UiId, UiPhoneFormat, UiRowColor }
 export {
     colorToRgbaMatrix,
     UiAlert,
     UiAlertMode,
-    UiBreadcrumbs,
     UiButton,
     UiButtonColorMode,
     UiButtonSize,

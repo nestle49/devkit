@@ -32,7 +32,6 @@
             <DemoUiTextFieldPhoneMask class="fluid" />
             <DemoUiFileInput />
             <DemoUiPagination />
-            <DemoUiBreadcrumbs />
             <DemoUiCount />
             <DemoUiRadio />
             <DemoUiModal />
@@ -51,7 +50,6 @@
 
 <script setup lang="ts">
 import DemoUiAlert from '~/components/demo/DemoUiAlert.vue'
-import DemoUiBreadcrumbs from '~/components/demo/DemoUiBreadcrumbs.vue'
 import DemoUiButton from '~/components/demo/DemoUiButton.vue'
 import DemoUiCheckbox from '~/components/demo/DemoUiCheckbox.vue'
 import DemoUiColorPicker from '~/components/demo/DemoUiColorPicker.vue'
